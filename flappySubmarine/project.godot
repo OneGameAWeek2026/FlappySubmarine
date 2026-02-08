@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="Flappy Submarine"
-run/main_scene="res://Scenes/Main.tscn"
+config/version="1.0"
+run/main_scene="uid://qbr1gy4s3yc"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/bg_color=Color(0.08627451, 0.08627451, 0.08627451, 1)
 boot_splash/image="uid://b783o1g411i8c"
 config/icon="res://icon.svg"
 boot_splash/minimum_display_time=2000

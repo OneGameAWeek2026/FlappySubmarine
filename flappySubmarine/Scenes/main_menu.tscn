@@ -1,0 +1,383 @@
+[gd_scene load_steps=7 format=3 uid="uid://qbr1gy4s3yc"]
+
+[ext_resource type="FontFile" uid="uid://cfsrk441wb4lc" path="res://Scribble Show.ttf" id="1_28flt"]
+[ext_resource type="Script" uid="uid://dkhuinhdddyg7" path="res://Scripts/main_menu.gd" id="1_48xlc"]
+[ext_resource type="Texture2D" uid="uid://bqov6hgma4en1" path="res://Sprites/BG.png" id="2_1ehe0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ce3w2"]
+texture = ExtResource("2_1ehe0")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ehe0"]
+bg_color = Color(0.023529412, 0.32156864, 0.44313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
+bg_color = Color(0.07058824, 0.19215687, 0.23921569, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_48xlc")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ce3w2")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -313.0
+offset_top = 147.0
+offset_right = 313.0
+offset_bottom = 364.0
+grow_horizontal = 2
+pivot_offset = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 130
+text = "Flappy submarine"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Highscore Label" type="Label" parent="Panel/Label"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -892.0
+offset_top = 648.0
+offset_right = -287.86035
+offset_bottom = 894.5556
+grow_horizontal = 2
+rotation = -0.65183365
+pivot_offset = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 55
+text = "HighScore: 156"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -186.0
+offset_top = -20.0
+offset_right = 187.0
+offset_bottom = 389.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="CPUButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.7750631, 0.7750635, 0.77506316, 1)
+theme_override_colors/font_pressed_color = Color(0.7750634, 0.7750634, 0.7750634, 1)
+theme_override_colors/font_hover_color = Color(0.6215236, 0.6215238, 0.6215248, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.47397602, 0.47397554, 0.47397596, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 51
+text = "Play"
+
+[node name="Credits" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.7750631, 0.7750635, 0.77506316, 1)
+theme_override_colors/font_pressed_color = Color(0.7750634, 0.7750634, 0.7750634, 1)
+theme_override_colors/font_hover_color = Color(0.6215236, 0.6215238, 0.6215248, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.47397602, 0.47397554, 0.47397596, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 51
+text = "Credits
+"
+
+[node name="Quit" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.7750631, 0.7750635, 0.77506316, 1)
+theme_override_colors/font_pressed_color = Color(0.7750634, 0.7750634, 0.7750634, 1)
+theme_override_colors/font_hover_color = Color(0.6215236, 0.6215238, 0.6215248, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.47397602, 0.47397554, 0.47397596, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 51
+text = "Quit"
+
+[node name="QuitDialogue" type="Panel" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.5
+offset_top = -107.0
+offset_right = 379.5
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1ehe0")
+
+[node name="Label" type="Label" parent="Panel/QuitDialogue"]
+layout_mode = 0
+offset_right = 759.5
+offset_bottom = 243.0
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 80
+text = "Are you sure you want to Quit?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="NoButton" type="Button" parent="Panel/QuitDialogue"]
+layout_mode = 0
+offset_left = 442.5
+offset_top = 269.0
+offset_right = 645.5
+offset_bottom = 326.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.7750631, 0.7750635, 0.77506316, 1)
+theme_override_colors/font_pressed_color = Color(0.7750634, 0.7750634, 0.7750634, 1)
+theme_override_colors/font_hover_color = Color(0.6215236, 0.6215238, 0.6215248, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.47397602, 0.47397554, 0.47397596, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 51
+text = "No
+"
+
+[node name="YesButton" type="Button" parent="Panel/QuitDialogue"]
+layout_mode = 0
+offset_left = 99.5
+offset_top = 269.0
+offset_right = 302.5
+offset_bottom = 326.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.7750631, 0.7750635, 0.77506316, 1)
+theme_override_colors/font_pressed_color = Color(0.7750634, 0.7750634, 0.7750634, 1)
+theme_override_colors/font_hover_color = Color(0.6215236, 0.6215238, 0.6215248, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.47397602, 0.47397554, 0.47397596, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 51
+text = "Yes
+"
+
+[node name="Credits" type="Control" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/Credits"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -20.0
+offset_right = 330.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 50
+text = "This Game was made by CrumblyBread as a part of the one game per week challange of 2026
+2/52"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BackButton" type="Button" parent="Panel/Credits"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = 314.0
+offset_right = 69.0
+offset_bottom = 403.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.7750631, 0.7750635, 0.77506316, 1)
+theme_override_colors/font_pressed_color = Color(0.7750634, 0.7750634, 0.7750634, 1)
+theme_override_colors/font_hover_color = Color(0.6215236, 0.6215238, 0.6215248, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.47397602, 0.47397554, 0.47397596, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 51
+text = "  Back  "
+
+[node name="QuitPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="QuitPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.5
+offset_top = -125.5
+offset_right = 169.5
+offset_bottom = 125.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_n45e2")
+
+[node name="Label" type="Label" parent="QuitPanel/Panel"]
+layout_mode = 0
+offset_left = 0.5
+offset_right = 339.5
+offset_bottom = 136.0
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 50
+text = "Back to menu?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="No" type="Button" parent="QuitPanel/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 25.0
+offset_top = 43.0
+offset_right = 132.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.7750631, 0.7750635, 0.77506316, 1)
+theme_override_colors/font_pressed_color = Color(0.7750634, 0.7750634, 0.7750634, 1)
+theme_override_colors/font_hover_color = Color(0.6215236, 0.6215238, 0.6215248, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.47397602, 0.47397554, 0.47397596, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 51
+text = "No
+"
+
+[node name="Yes" type="Button" parent="QuitPanel/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = 43.0
+offset_right = -28.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.7750631, 0.7750635, 0.77506316, 1)
+theme_override_colors/font_pressed_color = Color(0.7750634, 0.7750634, 0.7750634, 1)
+theme_override_colors/font_hover_color = Color(0.6215236, 0.6215238, 0.6215248, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.47397602, 0.47397554, 0.47397596, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 51
+text = "Yes"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="Panel/VBoxContainer/CPUButton" to="." method="_on_cpu_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Panel/QuitDialogue/NoButton" to="." method="_on_no_button_pressed"]
+[connection signal="pressed" from="Panel/QuitDialogue/YesButton" to="." method="_on_yes_button_pressed"]
+[connection signal="pressed" from="Panel/Credits/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="QuitPanel/Panel/No" to="." method="_on_no_pressed"]
+[connection signal="pressed" from="QuitPanel/Panel/Yes" to="." method="_on_yes_pressed"]

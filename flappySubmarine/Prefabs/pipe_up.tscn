@@ -5,15 +5,13 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l785l"]
 size = Vector2(238, 1070)
 
-[node name="PipeUp" type="Node2D"]
+[node name="PipeUp" type="Area2D"]
 rotation = 3.1415927
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 534)
 texture = ExtResource("1_a6kng")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 534)
 shape = SubResource("RectangleShape2D_l785l")
